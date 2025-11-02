@@ -1,0 +1,126 @@
+
+# config.yml
+# Konfigurera din jobbsökning här
+
+# Sökord - lägg till vad du söker efter
+# Tips: använd minustecken (-) för att exkludera ord, t.ex. "devops -senior"
+
+keywords:
+  # LIA och praktik
+  - "LIA IT"
+  - "LIA DevOps"
+  - "LIA Cloud"
+  - "LIA infrastruktur"
+  - "praktikplats systemutveckling"
+  - "praktik devops"
+  
+  # Junior-roller
+  - "junior devops"
+  - "junior systemadministratör"
+  - "junior cloud"
+  - "junior cloud engineer"
+  
+  # Trainee och ingångsroller
+  #- "trainee IT"
+  #- "graduate program"
+  
+  # Specifika roller
+  - "devops utvecklare -senior -lead"
+  - "systemautomatiserare -senior -erfaren"
+  - "driftsautomatiserare -senior -erfaren"
+  - "configuration manager -senior -lead"
+  
+  # Tekniska roller utan erfarenhetskrav
+  - "devops engineer -senior -lead -5 år"
+  - "cloud engineer -senior -lead -erfaren"
+  - "systemadministratör -senior -lead"
+
+# Platser att söka på (kommunnamn)
+locations:
+  - Stockholm
+  - Solna
+  - Sundbyberg
+  - Huddinge
+  - Nacka
+  - Lidingö
+
+# Hur många resultat per sökning (max 100)
+limit: 50
+
+# FILTRERING - Vilka jobb ska visas?
+
+# Minst ETT av dessa ord måste finnas i jobbtitel eller företagsnamn
+include_words:
+  - devops
+  - cloud
+  - kubernetes
+  - docker
+  - terraform
+  - ansible
+  - aws
+  - azure
+  - gcp
+  - jenkins
+  - gitlab
+  - ci/cd
+  - linux
+  - infrastructure
+  - drift
+  - junior
+  - trainee
+  - graduate
+  - lia
+  - praktik
+  - systemautomatiserare
+  - devops engineer
+  - cloud engineer
+  - infrastruktur
+
+# Om NÅGOT av dessa ord finns så filtreras jobbet bort
+exclude_words:
+  - hotell
+  - restaurang
+  - kock
+  - servitör
+  - bartender
+  - café
+  - fordon
+  - mekaniker
+  - busschaufför
+  - vård
+  - sjuk
+  - lärare
+  - butik
+  - lager
+  - bygg
+  - snickare
+  - elektriker
+  - städ
+  - chef
+  - senior
+  - lead
+  - architect
+  - principal
+  - specialist
+  - säkerhetsprövning
+  - security clearance
+  - 5 år
+  - 5+ years
+  - 3+ years
+  - marknadsplanerare
+  - marknad
+  - försäljning
+  - sales
+  - support
+  - key account
+  - business administration
+  - logistik
+  - studentprogram
+  - helpdesk
+  - servicedesk
+
+# TIPS:
+# 1. Lägg till fler sökord under keywords som passar din profil
+# 2. Ändra locations till dina önskade kommuner
+# 3. Anpassa include_words och exclude_words för bättre träffar
+# 4. Kör med: python main.py (från src-mappen)
