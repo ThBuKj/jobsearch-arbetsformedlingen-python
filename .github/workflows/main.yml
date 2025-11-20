@@ -1,0 +1,47 @@
+
+
+name: CI - Kvalitet & Säkerhet
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  quality-assurance:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Hämta koden
+    - name: Hämta koden (Checkout)
+      uses: actions/checkout@v4
+
+    # 2. Installera Python
+    - name: Installera Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12.3'
+
+    # 3. Installera verktygen vi behöver
+    # Vi installerar ruff (linting) och bandit (säkerhet)
+    - name: Installera dependencies
+      run: pip install ruff bandit
+
+    # 4. Kör Linting (Ruff)
+    # Den kollar om koden är "snygg"
+    - name: Linting (Ruff)
+      run: ruff check .
+
+    # 5. Kör Säkerhetskoll (Bandit)
+    # -r betyder "recursive" (leta i alla mappar)
+    # -ll betyder "visa bara fel av level Low och uppåt" (så den inte gnäller på allt)
+    - name: Security (Bandit)
+      run: bandit -r .
+
+    # 6. Kör din kod/tester
+    # (Byt ut filnamn.py mot din fil precis som förut!)
+    - name: Kör mina script
+      working-directory: ./src
+      run: |
+        python main.py
+
+        
