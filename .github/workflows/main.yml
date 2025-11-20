@@ -21,10 +21,11 @@ jobs:
       with:
         python-version: '3.12.3'
 
-    # 3. Installera verktygen vi behöver
-    # Vi installerar ruff (linting) och bandit (säkerhet)
+# 3. Installera verktygen OCH biblioteken
     - name: Installera dependencies
-      run: pip install ruff bandit
+      run: |
+        pip install ruff bandit
+        pip install -r requirements.txt
 
     # 4. Kör Linting (Ruff)
     # Den kollar om koden är "snygg"
