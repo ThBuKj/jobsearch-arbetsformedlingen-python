@@ -1,6 +1,7 @@
 # main.py
 # Hämtar jobb från arbetsförmedlingen och sparar till Excel
 
+
 import os
 import yaml
 import pandas as pd
