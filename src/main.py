@@ -121,7 +121,7 @@ def main():
             for job in old_jobs:
                 if pd.notna(job.get("url")):
                     old_urls.add(job["url"].strip())
-        except:
+        except FileNotFoundError:
             print("Kunde inte läsa gammal fil")
     
     # Nya jobb
