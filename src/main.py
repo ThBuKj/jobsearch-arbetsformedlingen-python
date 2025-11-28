@@ -85,7 +85,6 @@ def main():
     locations = config["locations"]
     limit = config.get("limit", 50)
 
-    # ✅ Dessa två ska självklart vara kvar 👍
     include_words = config.get("include_words", [])
     exclude_words = config.get("exclude_words", [])
     
